@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌸 Happy Teacher's Day!</h1>
+        <p>Thank you for inspiring us every day.</p>
+    </header>
+
+
+    <section class="greeting">
+        <h2>Dear Ma'am Mari</h2>
+
+        <p>
+            Thank you for teaching us Web Development Fundamentals and for
+            patiently guiding us while we learn HTML, CSS, and how to build
+            websites. Because of your lessons, we are slowly becoming more
+            confident in coding and creating our own websites.
+        </p>
+
+        <p>
+            We truly appreciate all the hard work and effort you give
+            to your students. Happy Teacher's Day!
+        </p>
+
+        <p>
+               - PACHECO, RENZO M    BSIT - 21006
+        </p>
+        
+     
+
+        <h3>💖 Thank you, Ma'am! 💖</h3>
+
+        <div class="teacher-photo">
+            <img src="4.jpg" alt="Ma'am Mari">
+        </div>
+    </section>
+
+
+    <section class="pictures">
+        <h2>📸 Our Memories</h2>
+        <div class="gallery">
+            <img src="1.jpg" alt="Teacher Photo">
+            <img src="2.jpg" alt="Teacher Photo">
+            <img src="3.jpg" alt="Teacher Photo">
+        </div>
+    </section>
+
+
+    <section class="video">
+         <video id="teacherVideo" controls>
+            <source src="lyca3.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </section>
+
+
+    <section class="music">
+        <audio id="bgMusic" autoplay loop>
+            <source src="bgmusic.mp3" type="audio/mpeg">
+         </audio>
+    </section>
+
+<script>
+    const music = document.getElementById("bgMusic");
+    const video = document.getElementById("teacherVideo");
+
+    function startMusic() {
+        music.play().catch(() => {});
+}
+        window.addEventListener("load", startMusic);
+
+        document.addEventListener("click", startMusic, { once: true });
+        document.addEventListener("touchstart", startMusic, { once: true });
+
+    video.addEventListener("play", () => {
+        music.pause();
+    });
+
+    video.addEventListener("pause", () => {
+        startMusic();
+    });
+
+    video.addEventListener("ended", () => {
+        startMusic();
+    });
+</script>
+    <footer>
+        <p>Made with ❤️ for our amazing teachers</p>
+        <p>Happy Teacher's Day! 🌷</p>
+    </footer>
+</body>
+</html>
